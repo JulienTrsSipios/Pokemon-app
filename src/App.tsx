@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
-import logo from "./logo.svg";
+import React, { useState } from "react";
 import "./App.css";
-import axios from "axios";
 import Pokemon from "./components/Pokemon";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
