@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Pokemon from "./components/Pokemon";
-import { Button } from "react-bootstrap";
+import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
 
 
@@ -21,12 +21,10 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <Pokemon idPokemon={idPokemon}></Pokemon>
-                <Button variant="Primary" onClick={() => incrementIdPokemon()}>
-          + 
-                </Button>
-                <Button disabled={idPokemon === 1 ? true : false} variant="Primary" onClick={() => decrementIdPokemon()}>
-          - 
-                </Button>
+                <Button onClick={() => incrementIdPokemon()} variant="contained">Change pokemon +</Button>
+                <p></p>
+                <Button disabled={idPokemon === 1 ? true : false} variant="contained" onClick={() => decrementIdPokemon()}> Change Pokemon -</Button>
+                <p></p>
                 <Link to={`/detail-page/${idPokemon}`}>More infos about this Pokemon
                 </Link>
             </header>
